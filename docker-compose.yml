@@ -1,0 +1,11 @@
+services:
+  server:
+    image: ghost
+    restart: always
+    ports:
+      - 8080:2368
+    volumes:
+      - .:/var/lib/ghost/content/themes/aeronaut-ghost-theme/
+    environment:
+      url: http://localhost:8080
+      NODE_ENV: development
