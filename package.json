@@ -1,6 +1,6 @@
 {
     "name": "aeronaut-ghost-theme",
-    "description": "A minimalist, cardstyle, OpenSource Ghost Theme for optimal desktop and mobile experiences based on daisyUI",
+    "description": "A minimalist, cardstyle, opensource Ghost Theme for optimal desktop and mobile experiences based on daisyUI",
     "demo": "https://defijulesverne.com",
     "version": "0.1.0",
     "engines": {
@@ -47,6 +47,7 @@
         "@rollup/plugin-commonjs": "^25.0.0",
         "@rollup/plugin-node-resolve": "^15.0.1",
         "@rollup/plugin-terser": "^0.4.0",
+        "@tailwindcss/typography": "^0.5.13",
         "bestzip": "^2.2.1",
         "daisyui": "^4.11.1",
         "postcss": "^8.4.24",
