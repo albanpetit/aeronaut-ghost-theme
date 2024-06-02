@@ -47,10 +47,5 @@ export default defineConfig({
             ], 
             minimize: true,
         }),
-        process.env.BUILD !== "production" && livereload({
-            watch: resolve('.'),
-            extraExts: ['hbs'],
-            exclusions: [resolve('node_modules')]
-        }),
     ]
 })
