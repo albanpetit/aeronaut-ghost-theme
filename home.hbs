@@ -1,3 +1,5 @@
-<h1 class="font-bold text-5xl">{{@site.title}}</h1>
-
 {{!< default}}
+<h1 class="font-bold text-5xl">{{@site.title}}</h1>
+{{#page}}
+  {{content}}
+{{/page}}
