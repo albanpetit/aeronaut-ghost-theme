@@ -1,74 +1,57 @@
 <!DOCTYPE html data-theme="nord">
 <html lang="{{@site.locale}}">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{asset "built/index.css"}}" />
+  <script src="{{asset "built/index.js"}}"></script>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{asset "built/index.css"}}" />
-    <script src="{{asset "built/index.js"}}" defer></script>
+  <title>{{meta_title}}</title>
 
-    <title>{{meta_title}}</title>
-
-    {{ghost_head}}
-
+  {{ghost_head}}
 </head>
-<body class="{{body_class}}">
-<div class="gh-viewport">
+<body class="{{body_class}} relative">
 
-<header id="gh-head" class="gh-head">
-    <nav class="gh-head-inner gh-container">
-
-        <div class="gh-head-brand">
-            <a class="gh-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
-            <a class="gh-burger" role="button" aria-label="menu">
-                <div class="gh-burger-box">
-                    <div class="gh-burger-inner"></div>
-                </div>
-            </a>
+<header class="py-5 w-full z-50 md:w-4/5 mx-auto">
+  <nav class="navbar">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
         </div>
-        <div class="gh-head-menu">
-            {{navigation}}
-        </div>
-        <div class="gh-head-actions">
-            <div class="gh-head-actions-list">
-                {{search}}
-                {{#if @site.members_enabled}}
-                    {{^if @member}}
-                    <a class="gh-button" href="{{@site.signup_url}}">Subscribe</a>
-                    {{else}}
-                    <a class="gh-button" href="#/portal/account">Account</a>
-                    {{/if}}
-                {{/if}}
-            </div>
-        </div>
-    </nav>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      </div>
+      {{#if @site.logo}}
+          <img src="{{@site.logo}}" alt="{{@site.title}}" />
+          <a class="btn btn-ghost text-xl">{{@site.title}}</a>
+      {{else}}
+          <a class="btn btn-ghost text-xl">{{@site.title}}</a>
+      {{/if}}
+    </div>
+    <div class="navbar-center hidden lg:flex">
+      {{navigation}}
+    </div>
+    <div class="navbar-end">
+      <a class="btn">Billeterie</a>
+    </div>
+  </nav>
 </header>
 
-<main class="gh-main">
-
-    {{{body}}}
-    {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
-
+<main class="">
+  {{{body}}}
+  {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
 </main>
 
 <footer class="gh-foot">
-    <div class="gh-container">
-        <div class="gh-foot-menu">
-            {{navigation type="secondary"}}
-        </div>
-        <div class="gh-foot-meta">
-            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-        </div>
-    </div>
+  <div class="gh-container">
+      <div class="gh-foot-menu">
+          {{navigation type="secondary"}}
+      </div>
+      <div class="gh-foot-meta">
+          Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+      </div>
+  </div>
 </footer>
-
-</div>
 
 {{!-- <foot> --}}
 {{ghost_foot}}
