@@ -1,61 +1,58 @@
 <!DOCTYPE html data-theme="nord">
 <html lang="{{@site.locale}}">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{asset "built/index.css"}}" />
-  <script src="{{asset "built/index.js"}}"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{asset "built/index.css"}}" />
+    <script src="{{asset "built/index.js"}}"></script>
 
-  <title>{{meta_title}}</title>
+    <title>{{meta_title}}</title>
 
-  {{ghost_head}}
-</head>
-<body class="{{body_class}} relative">
-
-<header class="py-5 w-full z-50 md:w-4/5 mx-auto">
-  <nav class="navbar">
-    <div class="navbar-start">
-      <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-        </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-      </div>
-      {{#if @site.logo}}
-          <img src="{{@site.logo}}" alt="{{@site.title}}" />
-          <a class="btn btn-ghost text-xl">{{@site.title}}</a>
-      {{else}}
-          <a class="btn btn-ghost text-xl">{{@site.title}}</a>
-      {{/if}}
+    {{ghost_head}}
+  </head>
+  <body class="{{body_class}} relative p-4">
+    <div class="p-4 h-1/2 w-full">
+      <header class="p-1 w-full h-full rounded-box bg-cover bg-center" style="background-image: url('{{@site.cover_image}}');">
+        <nav class="navbar">
+          <div class="navbar-start hidden lg:flex">
+            {{navigation}}
+          </div>
+          <div class="navbar-center">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+              </div>
+              <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            </div>
+            {{#if @site.logo}}
+              <img src="{{@site.logo}}" alt="{{@site.title}}" />
+              <a class="btn btn-ghost text-xl">{{@site.title}}</a>
+            {{else}}
+              <a class="btn btn-ghost text-xl">{{@site.title}}</a>
+            {{/if}}
+          </div>
+          <div class="navbar-end">
+            <a class="btn">Billeterie</a>
+          </div>
+        </nav>
+      </header>
     </div>
-    <div class="navbar-center hidden lg:flex">
-      {{navigation}}
-    </div>
-    <div class="navbar-end">
-      <a class="btn">Billeterie</a>
-    </div>
-  </nav>
-</header>
-
-<main class="">
-  {{{body}}}
-  {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
-</main>
-
-<footer class="gh-foot">
-  <div class="gh-container">
-      <div class="gh-foot-menu">
-          {{navigation type="secondary"}}
+    <main class="">
+      {{{body}}}
+      {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
+    </main>
+    <footer class="gh-foot">
+      <div class="gh-container">
+          <div class="gh-foot-menu">
+              {{navigation type="secondary"}}
+          </div>
+          <div class="gh-foot-meta">
+              Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+          </div>
       </div>
-      <div class="gh-foot-meta">
-          Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
-      </div>
-  </div>
-</footer>
-
-{{!-- <foot> --}}
-{{ghost_foot}}
-{{!-- Outputs important scripts - should always be included before closing body tag --}}
-
-</body>
+    </footer>
+    {{!-- <foot> --}}
+    {{ghost_foot}}
+    {{!-- Outputs important scripts - should always be included before closing body tag --}}
+  </body>
 </html>
