@@ -14,7 +14,7 @@
     <div class="p-4 h-1/2 w-full">
       <header class="p-1 w-full h-full rounded-box bg-cover bg-center" style="background-image: url('{{@site.cover_image}}');">
         <nav class="navbar">
-          <div class="navbar-start hidden lg:flex">
+          <div class="navbar-start  hidden lg:flex">
             {{navigation}}
           </div>
           <div class="navbar-center">
@@ -24,20 +24,15 @@
               </div>
               <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
             </div>
-            {{#if @site.logo}}
-              <img src="{{@site.logo}}" alt="{{@site.title}}" />
-              <a class="btn btn-ghost text-xl">{{@site.title}}</a>
-            {{else}}
-              <a class="btn btn-ghost text-xl">{{@site.title}}</a>
-            {{/if}}
           </div>
           <div class="navbar-end">
             <a class="btn">Billeterie</a>
           </div>
         </nav>
+
       </header>
     </div>
-    <main class="">
+    <main class="p-4">
       {{{body}}}
       {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
     </main>
