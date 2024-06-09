@@ -23,3 +23,5 @@ projectFilesBackup
 .DS_Store
 
 dist/
+
+container-content

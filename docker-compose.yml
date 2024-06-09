@@ -1,11 +1,34 @@
 services:
-  server:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+    volumes:
+      - ./container-content/db:/var/lib/mysql
+
+  ghost:
     image: ghost
     restart: always
     ports:
       - 8080:2368
     volumes:
-      - .:/var/lib/ghost/content/themes/aeronaut-ghost-theme/:Z
+      - .:/var/lib/ghost/content/themes/aeronaut-ghost-theme/
+      - /var/lib/ghost/content/themes/aeronaut-ghost-theme/container-content/db
+      - ./container-content/ghost/apps:/var/lib/ghost/content/apps
+      - ./container-content/ghost/data:/var/lib/ghost/content/data
+      - ./container-content/ghost/files:/var/lib/ghost/content/files
+      - ./container-content/ghost/images:/var/lib/ghost/content/images
+      - ./container-content/ghost/logs:/var/lib/ghost/content/logs
+      - ./container-content/ghost/media:/var/lib/ghost/content/media
+      - ./container-content/ghost/public:/var/lib/ghost/content/public
+      - ./container-content/ghost/settings:/var/lib/ghost/content/settings
     environment:
       url: http://localhost:8080
       NODE_ENV: development
+      database__client: mysql
+      database__connection__host: db
+      database__connection__user: root
+      database__connection__password: example
+      database__connection__database: ghost
+
