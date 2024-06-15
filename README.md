@@ -44,6 +44,8 @@ taxonomies:
   author: /author/{slug}/
 ```
 
+The next step is to create a custom homepage as a Ghost page - this is fairly self explanatory. It's important to make note of the page URL in the menu that you assign, 'home' URL is mandatory. 
+
 ## Local development guide
 
 The Aeronaut theme provides a first-class development experience out of the box. 
