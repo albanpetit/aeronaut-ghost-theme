@@ -1,5 +1,17 @@
 {{!< default}}
-<h1 class="font-bold text-5xl">{{@site.title}}</h1>
-{{#page}}
-  {{content}}
-{{/page}}
+<div class="basis-5/12">
+  <h1 class="font-bold text-5xl">{{@site.title}}</h1>
+  {{#page}}
+    {{content}}
+  {{/page}}
+</div>
+<div class="basis-2/12">
+  <img src="" alt="">
+</div>
+<div class="basis-5/12 flex flex-col gap-8">
+  {{#get "posts" filter='featured:true' limit='2' include='tags'}}
+    {{#foreach posts}}
+        {{> "post-card"}}
+    {{/foreach}}
+  {{/get}}
+</div>
