@@ -11,7 +11,7 @@ export default {
     themes: [
       {
         nord: {
-          ...require("daisyui/src/theming/themes")["nord"],
+          ...require("daisyui/src/theming/themes")["dracula"],
           "--rounded-box": "1.2rem",
           "--rounded-btn": "0.6rem",
         },
