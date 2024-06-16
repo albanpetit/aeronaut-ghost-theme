@@ -1,5 +1,5 @@
-<!DOCTYPE html data-theme="nord">
-<html lang="{{@site.locale}}">
+<!DOCTYPE html data-theme="dracule">
+<html lang="{{@site.locale}}" class="h-full">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,35 +10,33 @@
 
     {{ghost_head}}
   </head>
-  <body class="{{body_class}} relative p-4">
-    <div class="p-4 h-1/2 w-full">
-      <header class="p-1 w-full h-full rounded-box bg-cover bg-center" style="background-image: url('{{@site.cover_image}}');">
-        <nav class="navbar">
-          <div class="navbar-start hidden lg:flex">
-            {{navigation}}
+  <body class="{{body_class}} bg-base-300 pb-16 h-9/12 relative flex flex-col text-base-content">
+    <header class="h-20">
+      <nav class="navbar h-full p-4">
+        <div class="navbar-start hidden lg:flex h-full">
+          <div class="flex h-full gap-4">
+            <img class="h-full" src="{{@site.logo}}" alt="{{@site.title}}">
+            <h1 class="font-bold text-3xl my-auto">{{@site.title}}</h1>
           </div>
-          <div class="navbar-center">
-            <div class="dropdown">
-              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-              </div>
-              <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        </div>
+        <div class="navbar-center">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
             </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
           </div>
-          <div class="navbar-end">
-            {{navigation type="secondary"}}
-            <a class="btn">Billeterie</a>
-          </div>
-        </nav>
+        </div>
+        <div class="navbar-end">
+          {{navigation}}
+        </div>
+      </nav>
+    </header>
 
-      </header>
-    </div>
-    <main class="p-4">
+    <main>
       {{{body}}}
-      {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
     </main>
-    {{!-- <foot> --}}
+
     {{ghost_foot}}
-    {{!-- Outputs important scripts - should always be included before closing body tag --}}
   </body>
 </html>

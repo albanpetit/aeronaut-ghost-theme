@@ -1,17 +1,38 @@
 {{!< default}}
-<div class="basis-5/12">
-  <h1 class="font-bold text-5xl">{{@site.title}}</h1>
+<div class="flex flex-1 w-full h-screen">
+  <div class="w-1/2 my-auto">
+    <div class="max-w-2xl mx-auto">
+      <h1 class="font-bold text-6xl">{{@site.description}}</h1>
+      {{#get "pages" limit="1" filter="slug:home"}}
+          {{#foreach pages}}
+            <h2 class="font-bold text-xl mt-8">{{excerpt}}</h2>
+          {{/foreach}}
+      {{/get}}
+      {{navigation type="secondary"}}
+    </div>
+  </div>
+  <div class="w-1/2 mb-24 mt-20 relative flex flex-col justify-end pl-8 pb-8 text-6xl">
+    <img class="absolute left-0 top-0 max-h-full w-full object-cover rounded-l-3xl" src="{{@site.cover_image}}" alt="">
+    <h2 class="relative">18 jours</h2>
+    <h2 class="relative">3 heures</h2>
+    <h2 class="relative">25 minutes</h2>
+    <h2 class="relative">32 secondes</h2>
+  </div>
+</div>
+
+<div class="w-8/12 mx-auto">
+  <h3 class="font-bold text-6xl mb-8">Les dernieres news</h3>
+  <div class="flex gap-8 flex-shrink-0">
+    {{#get "posts" filter='featured:true' limit='2' include='tags'}}
+      {{#foreach posts}}
+          {{> "post-card"}}
+      {{/foreach}}
+    {{/get}}
+  </div>
+</div>
+
+<div class="w-8/12 mx-auto">
   {{#page}}
     {{content}}
   {{/page}}
-</div>
-<div class="basis-2/12">
-  <img src="" alt="">
-</div>
-<div class="basis-5/12 flex flex-col gap-8">
-  {{#get "posts" filter='featured:true' limit='2' include='tags'}}
-    {{#foreach posts}}
-        {{> "post-card"}}
-    {{/foreach}}
-  {{/get}}
 </div>

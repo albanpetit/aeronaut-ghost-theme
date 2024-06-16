@@ -1,5 +1,13 @@
-<ul class="menu p-0 menu-horizontal">
-  {{#foreach navigation}}
-  <li class=""><a class="btn btn-neutral mr-3" href="{{url absolute="true"}}">{{label}}</a></li>
-  {{/foreach}}
-</ul>
+{{#if isSecondary}}
+  <ul class="menu p-0 mt-8 menu-horizontal flex gap-3">
+    {{#foreach navigation}}
+    <li class=""><a class="btn btn-lg btn-wide btn-primary" href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+  </ul>
+{{else}}
+  <ul class="menu p-0 menu-horizontal flex gap-3">
+    {{#foreach navigation}}
+    <li class=""><a class="btn btn-secondary" href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+  </ul>
+{{/if}}
