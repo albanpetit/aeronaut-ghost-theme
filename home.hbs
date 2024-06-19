@@ -1,7 +1,16 @@
 {{!< default}}
-<div class="flex flex-1 w-full h-screen">
-  <div class="w-1/2 my-auto">
-    <div class="max-w-2xl mx-auto">
+<div class="flex flex-1 lg:flex-row-reverse flex-col w-full min-h-[calc(100vh-5rem)] lg:p-0 p-8 pt-4">
+  <div class="lg:w-1/2 w-full lg:mb-24 lg:mt-20 relative flex flex-col justify-end p-8 text-6xl h-192 lg:h-auto">
+    <div class="absolute left-0 top-0 h-full w-full lg:rounded-l-3xl rounded-3xl animated-border-box-glow"></div>
+    <div class="absolute left-0 top-0 h-full w-full lg:rounded-l-3xl rounded-3xl animated-border-box"></div>
+    <img class="absolute left-0 top-0 h-full w-full object-cover lg:rounded-l-3xl rounded-3xl" src="{{@site.cover_image}}" alt="">
+    <h2 class="relative">18 jours</h2>
+    <h2 class="relative">3 heures</h2>
+    <h2 class="relative">25 minutes</h2>
+    <h2 class="relative">32 secondes</h2>
+  </div>
+  <div class="lg:w-1/2 w-full lg:my-auto mt-8 lg:px-8">
+    <div class="lg:max-w-2xl mx-auto">
       <h1 class="font-bold text-6xl">{{@site.description}}</h1>
       {{#get "pages" limit="1" filter="slug:home"}}
           {{#foreach pages}}
@@ -11,19 +20,16 @@
       {{navigation type="secondary"}}
     </div>
   </div>
-  <div class="w-1/2 mb-24 mt-20 relative flex flex-col justify-end pl-8 pb-8 text-6xl">
-    <div class="absolute left-0 top-0 h-full w-full object-cover rounded-l-3xl animated-border-box-glow"></div>
-    <div class="absolute left-0 top-0 h-full w-full object-cover rounded-l-3xl animated-border-box"></div>
-    <img class="absolute left-0 top-0 h-full w-full object-cover rounded-l-3xl" src="{{@site.cover_image}}" alt="">
-    <h2 class="relative">18 jours</h2>
-    <h2 class="relative">3 heures</h2>
-    <h2 class="relative">25 minutes</h2>
-    <h2 class="relative">32 secondes</h2>
-  </div>
 </div>
 
-<div class="w-8/12 mx-auto">
-  <h3 class="font-bold text-6xl mb-8">Les dernieres news</h3>
+<div class="lg:w-8/12 px-8 mx-auto">
+  {{#page}}
+    {{content}}
+  {{/page}}
+</div>
+
+<div class="lg:w-8/12 px-8 mx-auto">
+  <h3 class="font-bold text-6xl my-8">Les dernieres news</h3>
   <div class="flex gap-8 flex-shrink-0">
     {{#get "posts" filter='featured:true' limit='2' include='tags'}}
       {{#foreach posts}}
@@ -31,10 +37,4 @@
       {{/foreach}}
     {{/get}}
   </div>
-</div>
-
-<div class="w-8/12 mx-auto">
-  {{#page}}
-    {{content}}
-  {{/page}}
 </div>
