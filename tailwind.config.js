@@ -4,16 +4,18 @@ import nodeResolve from '@rollup/plugin-node-resolve';
 export default {
   content: ["./*.hbs", "./**/*.hbs"],
   theme: {
-      extend: {}
+    extend: {
+      spacing: {
+        "192": "36rem",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography"), require('daisyui'),],
   daisyui: {
     themes: [
       {
-        nord: {
+        dracula: {
           ...require("daisyui/src/theming/themes")["dracula"],
-          "--rounded-box": "1.2rem",
-          "--rounded-btn": "0.6rem",
         },
       },
     ],
