@@ -23,6 +23,7 @@ services:
       - ./container-content/ghost/media:/var/lib/ghost/content/media
       - ./container-content/ghost/public:/var/lib/ghost/content/public
       - ./container-content/ghost/settings:/var/lib/ghost/content/settings
+      - ./config.development.json:/var/lib/ghost/config.development.json
     environment:
       url: http://localhost:8080
       NODE_ENV: development
