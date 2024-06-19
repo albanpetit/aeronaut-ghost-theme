@@ -1,10 +1,3 @@
-/*
-
-This is a development CSS file that is compiled to a minified
-production stylesheet in assets/built/screen.css using: npm run dev
-
-*/
-
 /* Lib - Local component imports
 /* ---------------------------------------------------------- */
 
@@ -16,6 +9,7 @@ production stylesheet in assets/built/screen.css using: npm run dev
 /* ---------------------------------------------------------- */
 
 @import "compass/css3";
+@import "gallery";
 
 .animated-border-box, .animated-border-box-glow {
     position: absolute;
@@ -53,7 +47,7 @@ production stylesheet in assets/built/screen.css using: npm run dev
   width: calc(100% - 10px);
   height: calc(100% - 10px);
   background: #292a2e;
-  border-radius: 7px;
+  border-radius: 1.5rem;
 }
   
 @keyframes rotate {
