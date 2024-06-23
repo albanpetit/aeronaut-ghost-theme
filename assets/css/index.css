@@ -8,9 +8,6 @@
 /* Main - Your styles here! Edit below
 /* ---------------------------------------------------------- */
 
-@import "compass/css3";
-@import "gallery";
-
 .animated-border-box, .animated-border-box-glow {
     position: absolute;
     overflow: hidden; 

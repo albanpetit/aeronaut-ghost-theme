@@ -62,7 +62,21 @@
         "defaults"
     ],
     "config": {
-        "card_assets": true,
+        "card_assets": {
+            "exclude": [
+                "audio",
+                "blockquote",
+                "bookmark",
+                "button",
+                "callout",
+                "file",
+                "header",
+                "nft",
+                "product",
+                "toggle",
+                "video"
+            ]
+        },
         "posts_per_page": 15,
         "image_sizes": {
             "xxs": {
