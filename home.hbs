@@ -29,7 +29,7 @@
 </div>
 
 <div class="lg:w-8/12 px-8 mx-auto">
-  <h3 class="font-bold text-6xl my-8">Les dernieres news</h3>
+  <h3 class="font-bold text-6xl my-8">{{t "Latest news"}}</h3>
   <div class="flex gap-8 flex-shrink-0">
     {{#get "posts" filter='featured:true' limit='2' include='tags'}}
       {{#foreach posts}}
