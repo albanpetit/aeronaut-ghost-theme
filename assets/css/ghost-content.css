@@ -1,3 +1,7 @@
+.kg-gallery-card {
+    @apply my-4;
+}
+
 .kg-gallery-image img {
     height: auto!important;
     border-radius: 1.5rem;
@@ -22,4 +26,10 @@
 
 .kg-callout-card-blue {
     @apply alert-info;
+}
+
+.ghost-content hr {
+    @apply divider;
+    @apply my-4;
+    border: 0;
 }
