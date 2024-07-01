@@ -1,7 +1,7 @@
 services:
   db:
     image: mysql:8.0
-    restart: always
+    restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: example
     volumes:
@@ -9,7 +9,7 @@ services:
 
   ghost:
     image: ghost
-    restart: always
+    restart: unless-stopped
     ports:
       - 8080:2368
     volumes:
@@ -32,3 +32,11 @@ services:
       database__connection__user: root
       database__connection__password: example
       database__connection__database: ghost
+    healthcheck:
+      test: timeout 10s bash -c ':> /dev/tcp/127.0.0.1/2368' || exit 1
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 90s
+    depends_on: 
+      - db
