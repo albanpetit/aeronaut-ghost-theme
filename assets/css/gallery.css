@@ -1,0 +1,8 @@
+.kg-gallery-card {
+    @apply my-4;
+}
+
+.kg-gallery-image img {
+    height: auto!important;
+    border-radius: 1.5rem;
+}
