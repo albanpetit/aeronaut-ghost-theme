@@ -6,36 +6,6 @@
 
 }
 
-.kg-gallery-card {
-    @apply my-4;
-}
-
-.kg-gallery-image img {
-    height: auto!important;
-    border-radius: 1.5rem;
-}
-
-.kg-callout-card { 
-    @apply alert;
-    @apply my-4;
-}
-
-.kg-callout-card-red {
-    @apply alert-error;
-}
-
-.kg-callout-card-yellow {
-    @apply alert-warning;
-}
-
-.kg-callout-card-green {
-    @apply alert-success;
-}
-
-.kg-callout-card-blue {
-    @apply alert-info;
-}
-
 .ghost-content hr {
     @apply divider;
     @apply my-4;
