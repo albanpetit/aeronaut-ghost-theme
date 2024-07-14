@@ -11,3 +11,35 @@
     @apply my-4;
     border: 0;
 }
+
+.ghost-content h2 {
+    @apply text-6xl;
+    font-weight: bold;
+}
+
+.ghost-content h2 strong {
+    @apply text-primary;
+}
+
+.ghost-content h2 em {
+    @apply text-secondary;
+    font-style: normal;
+}
+
+.ghost-content h3 {
+    @apply text-4xl;
+    font-weight: bold;
+}
+
+.ghost-content h3 strong {
+    @apply text-primary;
+}
+
+.ghost-content h3 em {
+    @apply text-secondary;
+    font-style: normal;
+}
+
+.ghost-content p {
+    @apply text-xl;
+}
