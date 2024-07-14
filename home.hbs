@@ -11,6 +11,7 @@
   </div>
   <div class="lg:w-1/2 w-full lg:my-auto mt-8 lg:px-8">
     <div class="lg:max-w-2xl mx-auto">
+      <img class="mb-8 w-64" src="{{@site.logo}}" alt="{{@site.title}}">
       <h1 class="font-bold text-6xl">{{@site.description}}</h1>
       {{#get "pages" limit="1" filter="slug:home"}}
           {{#foreach pages}}
