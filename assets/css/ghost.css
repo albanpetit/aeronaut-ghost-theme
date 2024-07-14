@@ -43,3 +43,8 @@
 .ghost-content p {
     @apply text-xl;
 }
+
+.ghost-content iframe {
+    @apply rounded-box;
+    @apply my-4;
+}
