@@ -14,8 +14,15 @@ export default {
   daisyui: {
     themes: [
       {
-        dracula: {
-          ...require("daisyui/src/theming/themes")["dracula"],
+        mytheme: {
+          "primary": "rgb(202, 38, 117)",
+          "secondary": "#e86d09",
+          "accent": "#4f1a4a",
+          "neutral": "#f9ae17",
+          "base-100": "#ffffff",
+          "base-200": "#efeae6",
+          "base-300": "#e7e2df",
+          "base-content": "#291334",
         },
       },
     ],
