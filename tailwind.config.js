@@ -5,7 +5,12 @@ export default {
   content: ["./*.hbs", "./**/*.hbs"],
   theme: {
     extend: {
+      aspectRatio: {
+          'a4': '21 / 29.7',
+      },
       spacing: {
+        "112": "28rem",
+        "128": "32rem",
         "192": "36rem",
       },
     },
