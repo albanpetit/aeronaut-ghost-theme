@@ -10,12 +10,12 @@
 
     {{ ghost_head }}
   </head>
-  <body class="{{ body_class }} bg-base-100 pb-16 h-9/12 relative flex flex-col text-base-content">
-    <header class="h-20">
-      <nav class="navbar h-full py-4 px-8">
-        <div class="navbar-start flex h-full">
-          <div class="flex h-full gap-4">
-            <h1 class="font-bold text-3xl my-auto">{{ @site.title }}</h1>
+  <body class="{{ body_class }} bg-base-100 relative  mx-auto p-4 sm:p-6 text-base-content container">
+    <header class="">
+      <nav class="navbar">
+        <div class="navbar-start flex">
+          <div class="flex gap-4">
+            <img class="w-32" src="{{@site.logo}}" alt="{{@site.title}}">
           </div>
         </div>
         <div class="navbar-end">
@@ -24,7 +24,7 @@
       </nav>
     </header>
 
-    <main>
+    <main class="flex flex-col gap-4 sm:gap-6 my-4 sm:my-6">
       {{{ body }}}
     </main>
 
