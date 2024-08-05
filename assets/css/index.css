@@ -39,10 +39,10 @@
   content: '';
   position: absolute;
   z-index: -1;
-  left: 5px;
-  top: 5px;
-  width: calc(100% - 10px);
-  height: calc(100% - 10px);
+  left: 0;
+  top: 0;
+  width: calc(100%);
+  height: calc(100%);
   background: #292a2e;
   border-radius: 1.5rem;
 }
