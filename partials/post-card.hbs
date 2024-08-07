@@ -1,44 +1,14 @@
-<article class="md:h-64 h-72 flex-auto w-full grow bg-center bg-cover rounded-box" style="background-image: url('{{img_url feature_image size="xl"}}');">
-  <div class="w-full h-full flex p-4 bg-black/20 rounded-box">
-
-    <a href="{{ url }}" class="w-8/12 flex flex-col justify-between text-base-100">
-      <div class="overflow-hidden">
-        <header class="">
-          <h2 class="text-2xl font-bold">
-            {{!-- {{#unless access}}
-            {{^has visibility="public"}}
-                {{#unless feature_image}}
-                    {{> "icons/lock"}}
-                {{/unless}}
-            {{/has}}
-            {{/unless}} --}}
-            {{title}}
-          </h2>
-        </header>
-
-        {{#if excerpt}}
-          <section class="">
-            <div class="">{{excerpt characters="40"}}</div>
-          </section>
-        {{/if}}
-      </div>
-
-      <section class="flex gap-2">
-        <time class="badge font-medium badge-lg" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
-        {{#if reading_time}}
-          <span class="badge font-medium badge-lg">{{reading_time}}</span>
-        {{/if}}
-        {{#if @site.comments_enabled}}
-          {{comment_count}}
-        {{/if}}
-      </section>
-    </a>
-
-    <footer class="w-4/12 flex justify-end flex-wrap gap-2 mt-auto">
-      {{#foreach tags limit='all'}}
-        <a class="btn self-end btn-sm w-fit btn-primary" href='{{ url }}'>{{ name }}</a>
-      {{/foreach}}
-    </footer>
-
+<article class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-highly-customizable-and-well-documented aspect-square bg-white justify-end post max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
+  <div class="flex flex-row justify-end gap-2 absolute top-0 left-0 right-0 m-4 z-50 pointer-events-none *:pointer-events-auto opacity-85">
+    <div class="relative bg-custom-600 text-custom-100 rounded-full overflow-hidden size-8 sm:size-10 px-3 py-1">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="absolute size-4 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd"></path>
+      </svg>
+        <div class="absolute top-0 bottom-0 left-0 right-0 bg-[#000000] opacity-25 peer-hover/href:opacity-0 peer-focus/href:opacity-0 duration-200 z-10"></div>
+    </div>
+  </div>
+  <img class="absolute top-0 bottom-0 left-0 right-0 size-full object-cover" src="{{ img_url feature_image size="xl" }}" alt="">
+  <div class="flex flex-col gap-4 sm:gap-6 p-4 sm:p-10 lg:p-6 xl:p-8 2xl:p-10 z-30">
+    <h3 class="font-black text-white line-clamp-3 text-lg sm:text-2xl lg:text-xl xl:text-2xl 2xl:text-3xl">{{ title }}</h3>
   </div>
 </article>
