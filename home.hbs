@@ -4,15 +4,15 @@
     <div class="relative">
       <div class="absolute left-0 top-0 h-full w-full rounded-3xl animated-border-box-glow"></div>
       <div class="absolute left-0 top-0 h-full w-full rounded-3xl animated-border-box"></div>
-      <div class="bg-white z-10 h-full w-full rounded-3xl ghost-content relative">
-        {{#get "pages" limit="1" filter="slug:hero"}}
-            {{#foreach pages}}
-              <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12">
-                <h1 class="font-bold text-2xl text-primary mb-2">{{@site.title}}</h1>
-                {{content}}
-              </div>
-              <img class="rounded-3xl w-full" src="{{feature_image}}" alt="">
-            {{/foreach}}
+      <div class="bg-white z-10 h-full w-full rounded-3xl ghost-content relative flex flex-col">
+        {{#get "pages" slug="hero" as |page|}}
+          {{#page}}
+            <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 grow">
+              <h1 class="font-bold text-2xl text-primary mb-2">{{@site.title}}</h1>
+              {{content}}
+            </div>
+            <img class="rounded-3xl w-full" src="{{feature_image}}" alt="">
+          {{/page}}
         {{/get}}
       </div>
     </div>
