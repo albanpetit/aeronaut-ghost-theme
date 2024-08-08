@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="flex flex-col gap-4 sm:gap-6">
-      <div class="grid grid-cols-2 gap-4 sm:gap-6">
+      <div class="grid grid-cols-4 gap-4 sm:gap-6">
         <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-tile-one aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end !justify-center !text-center max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
           {{#get "pages" slug="tile-1" as |page|}}
             {{#page}}
@@ -40,15 +40,35 @@
             {{/page}}
           {{/get}}
         </div>
+        <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-tile-one aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end !justify-center !text-center max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
+          {{#get "pages" slug="tile-2" as |page|}}
+            {{#page}}
+              <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 grow">
+                <h1 class="font-bold text-2xl text-primary mb-2">{{@site.title}}</h1>
+                {{content}}
+              </div>
+              <img class="rounded-3xl w-full" src="{{feature_image}}" alt="">
+            {{/page}}
+          {{/get}}
+        </div>
+        <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-tile-one aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end !justify-center !text-center max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
+          {{#get "pages" slug="tile-2" as |page|}}
+            {{#page}}
+              <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 grow">
+                <h1 class="font-bold text-2xl text-primary mb-2">{{@site.title}}</h1>
+                {{content}}
+              </div>
+              <img class="rounded-3xl w-full" src="{{feature_image}}" alt="">
+            {{/page}}
+          {{/get}}
+        </div>
       </div>
       <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] h-full bg-white max-sm:slide-in-from-bottom-8 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
-        {{#get "pages" slug="tile-3" as |page|}}
+        {{#get "pages" slug="section-1" as |page|}}
           {{#page}}
-            <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 grow">
-              <h1 class="font-bold text-2xl text-primary mb-2">{{@site.title}}</h1>
+            <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 grow ghost-content">
               {{content}}
             </div>
-            <img class="rounded-3xl w-full" src="{{feature_image}}" alt="">
           {{/page}}
         {{/get}}
       </div>
@@ -61,21 +81,12 @@
         {{/foreach}}
       {{/get}}
   </div>
-</div>
-
-{{!-- <div class="mb-8 mx-auto">
-  <h3 class="font-bold text-6xl my-8">{{t "Important informations"}}</h3>
-  <div class="gap-8 grid md:grid-cols-2 grid-cols-1">
-    {{#get "posts" filter='featured:true' include='tags'}}
-      {{#foreach posts}}
-          {{> "post-card"}}
-      {{/foreach}}
-    {{/get}}
+  <div class="grid lg:grid-cols-2 gap-4 sm:gap-6">
+    <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-section-one h-full bg-white slide-in-from-bottom-12">
+    
+    </div>
+    <div class="flex flex-col gap-4 sm:gap-6">
+      
+    </div>
   </div>
 </div>
-
-<div class="xl:w-8/12 px-8 mx-auto ghost-content">
-  {{#page}}
-    {{content}}
-  {{/page}}
-</div> --}}
