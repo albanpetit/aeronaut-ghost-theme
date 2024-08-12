@@ -1,0 +1,26 @@
+.gh-announcement-bar {
+    @apply alert;
+    @apply mb-4;
+    @apply sm:mb-6;
+}
+
+.gh-announcement-bar.light {
+    background-color: white !important;
+}
+
+.gh-announcement-bar-content {
+    padding-right: 1rem !important;
+}
+
+.gh-announcement-bar button {
+    stroke: white !important;
+    top: 2rem !important;
+    right: 1rem !important;
+    box-shadow:  !important;
+    @apply p-4;
+    @apply btn-primary !important;
+    @apply btn !important;
+    @apply btn-xs !important;
+    height: 32px !important;
+    @apply text-white !important;
+}
