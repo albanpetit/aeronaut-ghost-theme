@@ -1,10 +1,10 @@
 {{!< default}}
 <div class="grid gap-4 sm:gap-6">
   <div class="grid lg:grid-cols-2 gap-4 sm:gap-6">
-    <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-hero bg-white max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12 relative">
+    <div class="tile-group flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-hero bg-white max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12 relative">
       <div class="absolute left-0 top-0 h-full w-full rounded-3xl animated-border-box-glow"></div>
       <div class="absolute left-0 top-0 h-full w-full rounded-3xl animated-border-box"></div>
-      <div class="bg-white shadow-xl  z-10 h-full w-full rounded-3xl ghost-content relative flex flex-col">
+      <div class="bg-white shadow-xl z-10 h-full w-full rounded-3xl ghost-content relative flex flex-col">
         {{#get "pages" slug="hero" as |page|}}
           {{#page}}
             <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 grow">
@@ -18,7 +18,7 @@
     </div>
     <div class="flex flex-col gap-4 sm:gap-6">
       <div class="grid grid-cols-4 gap-4 sm:gap-6">
-        <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-tile-one aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end !justify-center !text-center max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
+        <div class="tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-tile-one aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end !justify-center !text-center max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
           {{#get "pages" slug="tile-1" as |page|}}
             {{#page}}
               <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 grow">
@@ -29,7 +29,7 @@
             {{/page}}
           {{/get}}
         </div>
-        <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-tile-one aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end !justify-center !text-center max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
+        <div class="tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-tile-one aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end !justify-center !text-center max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
           {{#get "pages" slug="tile-2" as |page|}}
             {{#page}}
               <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 grow">
@@ -40,8 +40,8 @@
             {{/page}}
           {{/get}}
         </div>
-        <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-tile-one aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end !justify-center !text-center max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
-          {{#get "pages" slug="tile-2" as |page|}}
+        <div class="tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-tile-one aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end !justify-center !text-center max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
+          {{#get "pages" slug="tile-3" as |page|}}
             {{#page}}
               <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 grow">
                 <h1 class="font-bold text-2xl text-primary mb-2">{{@site.title}}</h1>
@@ -51,8 +51,8 @@
             {{/page}}
           {{/get}}
         </div>
-        <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-tile-one aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end !justify-center !text-center max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
-          {{#get "pages" slug="tile-2" as |page|}}
+        <div class="tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-tile-one aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end !justify-center !text-center max-sm:slide-in-from-bottom-6 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
+          {{#get "pages" slug="tile-4" as |page|}}
             {{#page}}
               <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 grow">
                 <h1 class="font-bold text-2xl text-primary mb-2">{{@site.title}}</h1>
@@ -63,7 +63,7 @@
           {{/get}}
         </div>
       </div>
-      <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] h-full bg-white max-sm:slide-in-from-bottom-8 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
+      <div class="tile-group flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] h-full bg-white max-sm:slide-in-from-bottom-8 lg:slide-in-from-bottom-8 max-sm:slide-in-from-bottom-10 lg:slide-in-from-bottom-12 slide-in-from-bottom-12">
         {{#get "pages" slug="section-1" as |page|}}
           {{#page}}
             <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 grow ghost-content">
@@ -83,10 +83,130 @@
   </div>
   <div class="grid lg:grid-cols-2 gap-4 sm:gap-6">
     <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-section-one h-full bg-white slide-in-from-bottom-12">
-    
+      <div class="flex flex-col gap-4 sm:gap-6 p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 z-30"></div>
     </div>
     <div class="flex flex-col gap-4 sm:gap-6">
+      <div class="grid grid-cols-2 gap-4 sm:gap-6">
+          {{#get "pages" slug="tile-5" as |page|}}
+            {{#page}}
+              <div class="tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-style-guide aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end post slide-in-from-bottom-12">
+                <a href="{{ excerpt }}" class="peer/href absolute top-0 bottom-0 left-0 right-0 z-50"></a>
+                <div class="flex flex-row justify-end gap-2 absolute top-0 left-0 right-0 m-4 z-50 pointer-events-none *:pointer-events-auto opacity-85"></div>
+                <div class="absolute top-0 bottom-0 left-0 right-0 bg-[#000000] opacity-25 peer-hover/href:opacity-0 peer-focus/href:opacity-0 duration-200 z-10"></div>
+                <picture class="absolute top-0 bottom-0 left-0 right-0 size-full object-cover">
+                  <source 
+                    class="absolute top-0 bottom-0 left-0 right-0 size-full object-cover"
+                    srcset="
+                    {{img_url feature_image size="xxs" format="avif"}} 30w,
+                    {{img_url feature_image size="xs" format="avif"}} 100w,
+                    {{img_url feature_image size="s" format="avif"}} 300w,
+                    {{img_url feature_image size="m" format="avif"}} 600w,
+                    {{img_url feature_image size="l" format="avif"}} 1200w,
+                    {{img_url feature_image size="xl" format="avif"}} 2000w"
+                    {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/if}}
+                    type="image/avif"
+                    {{^if @first}}loading="lazy"{{/if}}
+                  >
+                  <source 
+                    class="absolute top-0 bottom-0 left-0 right-0 size-full object-cover"
+                    srcset="
+                    {{img_url feature_image size="xxs" format="webp"}} 30w,
+                    {{img_url feature_image size="xs" format="webp"}} 100w,
+                    {{img_url feature_image size="s" format="webp"}} 300w,
+                    {{img_url feature_image size="m" format="webp"}} 600w,
+                    {{img_url feature_image size="l" format="webp"}} 1200w,
+                    {{img_url feature_image size="xl" format="webp"}} 2000w"
+                    {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/if}}
+                    type="image/webp"
+                    {{^if @first}}loading="lazy"{{/if}}
+
+                  >
+                  <img
+                    class="absolute top-0 bottom-0 left-0 right-0 size-full object-cover"
+                    srcset="
+                    {{img_url feature_image size="xxs"}} 30w,
+                    {{img_url feature_image size="xs"}} 100w,
+                    {{img_url feature_image size="s"}} 300w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 1200w,
+                    {{img_url feature_image size="xl"}} 2000w"
+                    {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/if}}
+                    src="{{img_url feature_image size="m"}}"
+                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    class="gh-card-image"
+                    {{^if @first}}loading="lazy"{{/if}}
+                  >
+                </picture>
+                <div class="flex flex-col gap-4 sm:gap-6 p-4 sm:p-10 lg:p-6 xl:p-8 2xl:p-10 z-30">
+                  <h3 class="">
+                    {{ content }}
+                  </h3>
+                </div>
+              </div>
+            {{/page}}
+          {{/get}}
+          {{#get "pages" slug="tile-6" as |page|}}
+            {{#page}}
+              <div class="tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-style-guide aspect-square bg-white hover:scale-[1.02] has-[a:focus]:scale-[1.02] duration-200 transition-transform justify-end post slide-in-from-bottom-12">
+                <a href="{{ excerpt }}" class="peer/href absolute top-0 bottom-0 left-0 right-0 z-50"></a>
+                <div class="flex flex-row justify-end gap-2 absolute top-0 left-0 right-0 m-4 z-50 pointer-events-none *:pointer-events-auto opacity-85"></div>
+                <div class="absolute top-0 bottom-0 left-0 right-0 bg-[#000000] opacity-25 peer-hover/href:opacity-0 peer-focus/href:opacity-0 duration-200 z-10"></div>
+                <picture class="absolute top-0 bottom-0 left-0 right-0 size-full object-cover">
+                  <source 
+                    class="absolute top-0 bottom-0 left-0 right-0 size-full object-cover"
+                    srcset="
+                    {{img_url feature_image size="xxs" format="avif"}} 30w,
+                    {{img_url feature_image size="xs" format="avif"}} 100w,
+                    {{img_url feature_image size="s" format="avif"}} 300w,
+                    {{img_url feature_image size="m" format="avif"}} 600w,
+                    {{img_url feature_image size="l" format="avif"}} 1200w,
+                    {{img_url feature_image size="xl" format="avif"}} 2000w"
+                    {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/if}}
+                    type="image/avif"
+                    {{^if @first}}loading="lazy"{{/if}}
+                  >
+                  <source 
+                    class="absolute top-0 bottom-0 left-0 right-0 size-full object-cover"
+                    srcset="
+                    {{img_url feature_image size="xxs" format="webp"}} 30w,
+                    {{img_url feature_image size="xs" format="webp"}} 100w,
+                    {{img_url feature_image size="s" format="webp"}} 300w,
+                    {{img_url feature_image size="m" format="webp"}} 600w,
+                    {{img_url feature_image size="l" format="webp"}} 1200w,
+                    {{img_url feature_image size="xl" format="webp"}} 2000w"
+                    {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/if}}
+                    type="image/webp"
+                    {{^if @first}}loading="lazy"{{/if}}
+
+                  >
+                  <img
+                    class="absolute top-0 bottom-0 left-0 right-0 size-full object-cover"
+                    srcset="
+                    {{img_url feature_image size="xxs"}} 30w,
+                    {{img_url feature_image size="xs"}} 100w,
+                    {{img_url feature_image size="s"}} 300w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 1200w,
+                    {{img_url feature_image size="xl"}} 2000w"
+                    {{^if @first}}sizes="(min-width: 1200px) 1200px, 100vw)"{{else}}sizes="(min-width: 800px) 100vw, 700px"{{/if}}
+                    src="{{img_url feature_image size="m"}}"
+                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                    class="gh-card-image"
+                    {{^if @first}}loading="lazy"{{/if}}
+                  >
+                </picture>
+                <div class="flex flex-col gap-4 sm:gap-6 p-4 sm:p-10 lg:p-6 xl:p-8 2xl:p-10 z-30">
+                  <h3 class="">
+                    {{ content }}
+                  </h3>
+                </div>
+              </div>
+            {{/page}}
+          {{/get}}
+      </div>
+      <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-section-two h-full bg-white slide-in-from-bottom-12">
       
+      </div>
     </div>
   </div>
 </div>

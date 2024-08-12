@@ -1,5 +1,6 @@
 // Import CSS
 import "../css/index.css";
+import "../css/theme.css";
 import "../css/announcement-bar.css";
 import "../css/bookmark.css";
 import "../css/callout.css";
