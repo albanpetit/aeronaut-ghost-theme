@@ -14,10 +14,10 @@
     @apply text-white;
     @apply line-clamp-3;
     @apply text-lg;
-    @apply sm:text-2xl;
-    @apply lg:text-xl;
-    @apply xl:text-xl;
-    @apply 2xl:text-2xl;
+    @apply sm:text-xl;
+    @apply lg:text-base;
+    @apply xl:text-base;
+    @apply 2xl:text-xl;
 }
 
 .tile p {
