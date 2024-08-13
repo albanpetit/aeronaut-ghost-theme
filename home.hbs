@@ -91,8 +91,12 @@
   </div>
   <div class="grid lg:grid-cols-2 gap-4 sm:gap-6">
     <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-section-one h-full bg-white slide-in-from-bottom-12">
-      <div class="flex flex-col gap-4 sm:gap-6 p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 z-30">
-
+      <div class="flex flex-col gap-4 sm:gap-6 z-30">
+        {{#get "pages" slug="section-2" as |page|}}
+          {{#page}}
+            <img src="{{feature_image}}" alt="" class="h-full w-full">
+          {{/page}}
+        {{/get}}
       </div>
     </div>
     <div class="flex flex-col gap-4 sm:gap-6">
@@ -210,8 +214,14 @@
             {{/page}}
           {{/get}}
       </div>
-      <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-section-two h-full bg-white slide-in-from-bottom-12">
-      
+      <div class="section flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-section-two h-full bg-white slide-in-from-bottom-12">
+        {{#get "pages" slug="section-3" as |page|}}
+          {{#page}}
+            <div class="p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 grow ghost-content">
+              {{content}}
+            </div>
+          {{/page}}
+        {{/get}}
       </div>
     </div>
   </div>
