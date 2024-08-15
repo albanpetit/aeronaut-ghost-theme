@@ -51,6 +51,10 @@
     @apply my-4;
 }
 
+.ghost-content .kg-card.kg-button-card {
+    @apply mt-3;
+}
+
 .ghost-content .kg-card.kg-button-card.kg-align-center {
     @apply btn;
     @apply btn-primary;
@@ -58,7 +62,6 @@
     @apply btn-lg;
     @apply w-full;
     @apply text-white;
-    @apply mb-3;
 }
 
 .ghost-content .kg-card.kg-button-card.kg-align-left {
