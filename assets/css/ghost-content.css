@@ -44,6 +44,7 @@
 
 .ghost-content p {
     @apply text-xl;
+    @apply min-h-6;
 }
 
 .ghost-content iframe {
