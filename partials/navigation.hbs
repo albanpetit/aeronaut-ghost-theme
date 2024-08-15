@@ -7,14 +7,14 @@
 {{else}}
   <ul class="menu p-0 menu-horizontal lg:flex gap-3 hidden">
     {{#foreach navigation}}
-      <li class=""><a class="btn btn-primary text-base-100" href="{{url absolute="true"}}">{{label}}</a></li>
+      <li class=""><a class="btn btn-secondary text-base-100" href="{{url absolute="true"}}">{{label}}</a></li>
     {{/foreach}}
   </ul>
   <div class="dropdown">
-    <div tabindex="0" role="button" class="btn btn-primary text-base-100 lg:hidden">
+    <div tabindex="0" role="button" class="btn btn-secondary text-base-100 lg:hidden">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
     </div>
-    <ul tabindex="0" class="menu menu-md dropdown-content mt-3 p-2 shadow bg-primary text-base-100 rounded-box w-52 right-0 z-50">
+    <ul tabindex="0" class="menu menu-md dropdown-content mt-3 p-2 shadow bg-secondary text-base-100 rounded-box w-52 right-0 z-50">
         {{#foreach navigation}}
           <li class=""><a class="" href="{{url absolute="true"}}">{{label}}</a></li>
         {{/foreach}}
