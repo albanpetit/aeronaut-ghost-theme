@@ -42,6 +42,21 @@
     font-style: normal;
 }
 
+.ghost-content h4 {
+    @apply text-2xl;
+    @apply mb-2;
+    font-weight: bold;
+}
+
+.ghost-content h4 strong {
+    @apply text-primary;
+}
+
+.ghost-content h4 em {
+    @apply text-secondary;
+    font-style: normal;
+}
+
 .ghost-content p {
     @apply text-xl;
     @apply my-4;
@@ -51,6 +66,12 @@
 .ghost-content iframe {
     @apply rounded-box;
     @apply my-4;
+}
+
+.ghost-content .kg-card .kg-image-card {
+    @apply float-left;
+    @apply mt-4;
+    @apply mr-4
 }
 
 .ghost-content .kg-card.kg-button-card {
