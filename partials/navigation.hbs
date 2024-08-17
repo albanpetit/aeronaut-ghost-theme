@@ -1,7 +1,7 @@
 {{#if isSecondary}}
-  <ul class="menu p-0 menu-horizontal flex gap-3">
+  <ul class="flex flex-wrap justify-center text-custom-600 gap-4 sm:gap-6 mt-6 sm:mt-12">
     {{#foreach navigation}}
-      <li class=""><a class="btn btn-secondary text-base-100" href="{{url absolute="true"}}">{{label}}</a></li>
+      <li class="whitespace-nowrap"><a class="text-primary-500 font-bold" href="{{url absolute="true"}}">{{label}}</a></li>
     {{/foreach}}
   </ul>
 {{else}}
