@@ -25,5 +25,5 @@
 }
 
 .section-1 hr {
-    @apply mt-auto;
+    @apply mt-auto !important;
 }
