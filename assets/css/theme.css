@@ -23,3 +23,7 @@
     @apply line-clamp-3;
     @apply text-lg;
 }
+
+.section-1 hr {
+    @apply mt-auto;
+}
