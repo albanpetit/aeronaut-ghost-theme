@@ -68,7 +68,7 @@
     @apply my-4;
 }
 
-.ghost-content .kg-card .kg-image-card {
+.ghost-content .kg-card.kg-image-card {
     @apply float-left;
     @apply mt-4;
     @apply mr-4
