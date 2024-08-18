@@ -1,7 +1,7 @@
 {{!< default}}
 
-{{#post}}
-<article class="gh-article {{post_class}} flex flex-col gap-6 xl:px-20 2xl:px-36 px-0">
+{{#page}}
+<article class="gh-article {{post_class}} flex flex-col gap-6 xl:px-32 px-0">
   <header class="relative flex flex-col gap-4 sm:gap-6 text-center w-full py-8 sm:py-16">
     <h1 class="font-black text-5xl sm:text-7xl md:text-8xl lg:text-6xl xl:text-7xl 2xl:text-8xl text-balance">{{title}}</h1>
     {{#if custom_excerpt}}
@@ -54,4 +54,4 @@
       {{content}}
   </div>
 </article>
-{{/post}}
+{{/page}}
