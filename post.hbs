@@ -46,8 +46,9 @@
             >
             <figcaption class="z-50 text-white absolute top-8 left-8">{{feature_image_caption}}</figcaption>
           </picture>
-          <div class="flex flex-col gap-4 sm:gap-6 p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 z-30">
+          <div class="flex flex-col gap-4 sm:gap-4 p-6 sm:p-12 lg:p-8 xl:p-10 2xl:p-12 z-30">
             <h1 class="font-black text-white text-balance text-4xl sm:text-6xl">{{title}}</h1>
+            <span class="gh-post-meta  text-sm text-left text-white font-black"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time><span class="bull"> &bull; </span>{{reading_time minute="Only a minute" minutes="Takes % minutes"}}</span>
             <div class="flex gap-2 sm:gap-4 items-center left-0 bottom-0">
               {{#foreach authors}}
                 <a href="{{ url }}" class="overflow-hidden group/author size-12 bg-white border-2 border-custom-200 rounded-full group-hover/author:scale-110 group-hover/author:duration-200 group-focus/author:scale-110 group-focus/author:duration-200">
@@ -55,9 +56,6 @@
                 </a>
                 <div class="flex flex-col text-sm text-left text-white font-black">
                   <a href="{{ url }}" class="flex flex-col text-sm text-left">{{ name }}</a>
-                  <div>
-                    <span class="gh-post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time> <span class="bull">&bull;</span> {{reading_time}}</span>
-                  </div>
                 </div>
               {{/foreach}}
             </div>
