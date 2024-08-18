@@ -81,7 +81,7 @@
     @apply mt-3;
 }
 
-.ghost-content .kg-card.kg-button-card.kg-align-center {
+.ghost-content .kg-card.kg-button-card.kg-align-center a {
     @apply btn;
     @apply btn-primary;
     @apply btn-wide;
@@ -90,7 +90,7 @@
     @apply text-white;
 }
 
-.ghost-content .kg-card.kg-button-card.kg-align-left {
+.ghost-content .kg-card.kg-button-card.kg-align-left a {
     @apply btn;
     @apply btn-primary;
     @apply text-white;
