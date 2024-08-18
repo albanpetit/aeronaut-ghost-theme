@@ -15,6 +15,7 @@
 .ghost-content h2 {
     @apply text-6xl;
     @apply mb-2;
+    @apply mt-8;
     font-weight: bold;
 }
 
@@ -30,6 +31,7 @@
 .ghost-content h3 {
     @apply text-4xl;
     @apply mb-2;
+    @apply mt-8;
     font-weight: bold;
 }
 
@@ -45,6 +47,7 @@
 .ghost-content h4 {
     @apply text-2xl;
     @apply mb-2;
+    @apply mt-8;
     font-weight: bold;
 }
 
