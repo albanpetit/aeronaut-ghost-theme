@@ -91,8 +91,8 @@
     <div class="tile group/tile flex flex-col relative bg-cover bg-center rounded-3xl shadow-xl overflow-hidden animate-in ease-out fill-mode-both [animation-duration:500ms] post-section-one h-full bg-white slide-in-from-bottom-12">
       {{#get "pages" slug="section-2" as |page|}}
         {{#page}}
-        <figure class="w-full">
-          <img src="{{feature_image}}" alt="" class="object-cover">
+        <figure class="w-full flex w-full relative">
+          <img src="{{feature_image}}" alt="" class="object-cover max-h-full max-w-full">
           <figcaption class="z-50 text-white absolute bottom-8 left-8">{{feature_image_caption}}</figcaption>
         </figure>
         {{/page}}
