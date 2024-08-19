@@ -69,6 +69,8 @@
 .ghost-content iframe {
     @apply rounded-box;
     @apply my-4;
+    @apply w-full !important;
+    aspect-ratio: 3/4;
 }
 
 .ghost-content .kg-card.kg-image-card {
