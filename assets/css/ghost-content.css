@@ -96,3 +96,40 @@
     @apply text-white;
     @apply mr-3;
 }
+
+.ghost-content .kg-card.kg-file-card {
+    @apply bg-white;
+    @apply rounded-3xl;
+    @apply w-full;
+}
+
+.ghost-content .kg-card.kg-file-card .kg-file-card-container {
+    @apply flex;
+    @apply flex-row;
+    @apply justify-between;
+    @apply px-8;
+    @apply py-4
+}
+
+.ghost-content .kg-card.kg-file-card .kg-file-card-container .kg-file-card-contents {
+}
+
+.ghost-content .kg-card.kg-file-card .kg-file-card-container .kg-file-card-contents .kg-file-card-title {
+    @apply font-bold;
+    @apply text-xl;
+}
+
+.ghost-content .kg-card.kg-file-card .kg-file-card-container .kg-file-card-contents .kg-file-card-metadata {
+    @apply flex;
+    @apply gap-4;
+    @apply font-bold;
+}
+
+.ghost-content .kg-card.kg-file-card .kg-file-card-container .kg-file-card-icon {
+    @apply flex;
+}
+
+.ghost-content .kg-card.kg-file-card .kg-file-card-container .kg-file-card-icon svg {
+    @apply w-12;
+    @apply my-auto;
+}
